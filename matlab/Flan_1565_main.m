@@ -16,20 +16,16 @@ A = Problem.A;
 xe = ones(size(A, 1), 1);
 b = A * xe;
 
-% time to calculate xe
-%f = @() A * xe; 
-%t = timeit(f)
+%time to calculate b
+f = @() A * xe; 
+t_b = timeit(f);
 
-disp('Memory before calculating x');
-memory
 % calculate x from A and b
 x = A \ b;
-disp('Memory after calculating x');
-memory
 
 % time to calculate x 
-%f = @() A \ b;
-%t = timeit(f);
+f = @() A \ b;
+t_x = timeit(f);
 
 % calculate relative error
 rel_error = norm(x - xe) / norm(xe);
