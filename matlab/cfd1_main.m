@@ -7,9 +7,9 @@ clear;
 %disp('Memory before loading matrix');
 %memory
 % load matrix in windows
-%load('C:\Users\carloradice\Documents\MCSLinearSystemSolverMatrici\matrici\Flan_1565\Flan_1565.mat');
+%load('C:\Users\carloradice\Documents\MCSLinearSystemSolverMatrici\matrici\cfd1/cfd1.mat');
 %load matrix in ubuntu
-load('/home/carloradice/Documents/magistrale/metodi_del_calcolo_scientifico/MCSLinearSystemSolverMatrici/matrici/Flan_1565/Flan_1565.mat')
+load('/home/carloradice/Documents/magistrale/metodi_del_calcolo_scientifico/MCSLinearSystemSolverMatrici/matrici/cfd1/cfd1.mat')
 %disp('Memory after loading matrix');
 %memory
 
