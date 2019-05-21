@@ -4,14 +4,14 @@
 clc;
 clear;
 
-%disp('Memory before loading matrix');
-%memory
+disp('Memory before loading matrix');
+memory
 % load matrix in windows
-%load('C:\Users\carloradice\Documents\MCSLinearSystemSolverMatrici\matrici\parabolic_fem/parabolic_fem.mat');
+load('C:\Users\carloradice\Documents\MCSLinearSystemSolverMatrici\matrici\parabolic_fem\parabolic_fem.mat');
 %load matrix in ubuntu
-load('/home/carloradice/Documents/magistrale/metodi_del_calcolo_scientifico/MCSLinearSystemSolverMatrici/matrici/parabolic_fem/parabolic_fem.mat')
-%disp('Memory after loading matrix');
-%memory
+%load('/home/carloradice/Documents/magistrale/metodi_del_calcolo_scientifico/MCSLinearSystemSolverMatrici/matrici/parabolic_fem/parabolic_fem.mat')
+disp('Memory after loading matrix');
+memory
 
 A = Problem.A;
 % exact solution
