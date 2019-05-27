@@ -46,7 +46,7 @@ int getValue(){ //Note: this value is in KB!
 int main()
 {
     int i;
-    std::cout << "Attach process while in waiting for standard input" << std::endl;
+    std::cout << "Attach process while waiting for standard input" << std::endl;
     std::cin >> i;
 
     // load sparse matrix
@@ -55,7 +55,7 @@ int main()
     std::cout << "Memory before loading matrix in KB: " << getValue() << std::endl;
 
     //load from ubuntu
-    Eigen::loadMarket(A, "/home/carloradice/Documents/magistrale/metodi_del_calcolo_scientifico/MCSLinearSystemSolverMatrici/matrici/apache2/apache2.mtx");
+    Eigen::loadMarket(A, "/home/carloradice/Documents/magistrale/metodi_del_calcolo_scientifico/MCSLinearSystemSolverMatrici/matrici/parabolic_fem/parabolic_fem.mtx");
 
     std::cout << "Memory after loading matrix in KB: " << getValue() << std::endl;
 
