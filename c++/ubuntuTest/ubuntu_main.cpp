@@ -15,7 +15,6 @@
  * UBUNTU LINUX VERSION
  * Methods which are needed to compute the values of the memory before, after loading the matrix and
  * the max memory usage.
- * (comment these two methods if using windows)
 */
 
 int parseLine(char* line){
@@ -33,6 +32,7 @@ int getValue(){ //Note: this value is in KB!
     int result = -1;
     char line[128];
 
+#pragma warning( disable : 4101)
     while (fgets(line, 128, file) != NULL){
         if (strncmp(line, "VmRSS:", 6) == 0){
             result = parseLine(line);
@@ -52,12 +52,12 @@ int main()
     // load sparse matrix
     Eigen::SparseMatrix<double> A;
 
-    std::cout << "Memory before loading matrix in KB: " << getValue() << std::endl;
+    //std::cout << "Real memory before loading matrix in KB: " << getValue() << std::endl;
 
     //load from ubuntu
     Eigen::loadMarket(A, "/home/carloradice/Documents/magistrale/metodi_del_calcolo_scientifico/MCSLinearSystemSolverMatrici/matrici/parabolic_fem/parabolic_fem.mtx");
 
-    std::cout << "Memory after loading matrix in KB: " << getValue() << std::endl;
+    std::cout << "Real memory after loading matrix in KB: " << getValue() << std::endl;
 
     // define xe and b
     Eigen::VectorXd xe = Eigen::VectorXd::Constant(A.rows(), 1);
@@ -79,7 +79,7 @@ int main()
     // print to screen duration
     std::cout << "Time taken by function: " << duration.count() << " microseconds" << std::endl;
 
-    std::cout << "Max Memory in KB: " << getValue() << std::endl;
+    std::cout << "Max real memory in KB: " << getValue() << std::endl;
 
     double relativeError = (x-xe).norm()/(xe).norm();
     // print to screen relative error
