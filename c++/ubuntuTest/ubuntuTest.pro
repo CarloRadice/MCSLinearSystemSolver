@@ -5,4 +5,6 @@ CONFIG -= qt
 
 SOURCES += \
         ubuntu_main.cpp
+
 INCLUDEPATH += /home/carloradice/Documents/magistrale/metodi_del_calcolo_scientifico/MCSLinearSystemSolver/c++
+
