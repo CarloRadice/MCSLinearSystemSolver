@@ -4,23 +4,21 @@
 clc;
 clear;
 
-disp('Memory before loading matrix');
-memory
+% Allow to get the values of memory more easily
+pause(10)
+
 % load matrix in windows
 load('C:\Users\carloradice\Documents\MCSLinearSystemSolverMatrici\matrici\apache2\apache2.mat');
 %load matrix in ubuntu
 %load('/home/carloradice/Documents/magistrale/metodi_del_calcolo_scientifico/MCSLinearSystemSolverMatrici/matrici/apache2/apache2.mat')
-disp('Memory after loading matrix');
-memory
+
+% Allow to get the values of memory more easily
+pause(10)
 
 A = Problem.A;
 % exact solution
 xe = ones(size(A, 1), 1);
 b = A * xe;
-
-%time to calculate b
-f = @() A * xe; 
-t_b = timeit(f);
 
 % calculate x from A and b
 x = A \ b;
