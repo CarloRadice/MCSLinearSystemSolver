@@ -5,15 +5,15 @@ clc;
 clear;
 
 % Allow to get the values of memory more easily
-pause(2)
+pause(3)
 
 % load matrix in windows
-load('C:\Users\carloradice\Documents\MCSLinearSystemSolverMatrici\matrici\shallow_water1\shallow_water1.mat');
+%load('C:\Users\carloradice\Documents\MCSLinearSystemSolverMatrici\matrici\shallow_water1\shallow_water1.mat');
 %load matrix in ubuntu
-%load('/home/carloradice/Documents/magistrale/metodi_del_calcolo_scientifico/MCSLinearSystemSolverMatrici/matrici/shallow_water1/shallow_water1.mat')
+load('/home/carloradice/Documents/magistrale/metodi_del_calcolo_scientifico/MCSLinearSystemSolverMatrici/matrici/shallow_water1/shallow_water1.mat')
 
 % Allow to get the values of memory more easily
-pause(2)
+pause(3)
 
 A = Problem.A;
 

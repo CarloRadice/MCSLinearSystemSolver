@@ -8,9 +8,9 @@ clear;
 pause(10)
 
 % load matrix in windows
-load('C:\Users\carloradice\Documents\MCSLinearSystemSolverMatrici\matrici\cfd1\cfd1.mat');
-%load matrix in ubuntu
-%load('/home/carloradice/Documents/magistrale/metodi_del_calcolo_scientifico/MCSLinearSystemSolverMatrici/matrici/cfd1/cfd1.mat')
+%load('C:\Users\carloradice\Documents\MCSLinearSystemSolverMatrici\matrici\cfd1\cfd1.mat');
+% load matrix in ubuntu
+load('/home/carloradice/Documents/magistrale/metodi_del_calcolo_scientifico/MCSLinearSystemSolverMatrici/matrici/cfd1/cfd1.mat')
 
 % Allow to get the values of memory more easily
 pause(10)

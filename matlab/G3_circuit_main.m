@@ -8,9 +8,9 @@ clear;
 pause(10)
 
 % load matrix in windows
-load('C:\Users\carloradice\Documents\MCSLinearSystemSolverMatrici\matrici\G3_circuit\G3_circuit.mat');
-%load matrix in ubuntu
-%load('/home/carloradice/Documents/magistrale/metodi_del_calcolo_scientifico/MCSLinearSystemSolverMatrici/matrici/G3_circuit/G3_circuit.mat')
+%load('C:\Users\carloradice\Documents\MCSLinearSystemSolverMatrici\matrici\G3_circuit\G3_circuit.mat');
+% load matrix in ubuntu
+load('/home/carloradice/Documents/magistrale/metodi_del_calcolo_scientifico/MCSLinearSystemSolverMatrici/matrici/G3_circuit/G3_circuit.mat')
 
 % Allow to get the values of memory more easily
 pause(10)

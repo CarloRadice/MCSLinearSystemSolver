@@ -71,7 +71,7 @@ int main()
     std::cout << "Virtual memory before loading matrix in KB: " << getValueVirtual() << std::endl;
 
     //load from ubuntu
-    Eigen::loadMarket(A, "/home/carloradice/Documents/magistrale/metodi_del_calcolo_scientifico/MCSLinearSystemSolverMatrici/matrici/cfd1/cfd1.mtx");
+    Eigen::loadMarket(A, "/home/carloradice/Documents/magistrale/metodi_del_calcolo_scientifico/MCSLinearSystemSolverMatrici/matrici/cfd2/cfd2.mtx");
 
     std::cout << "Physical memory after loading matrix in KB: " << getValuePhysical() << std::endl;
     std::cout << "Virtual memory after loading matrix in KB: " << getValueVirtual() << std::endl;
