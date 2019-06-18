@@ -85,7 +85,7 @@ legend('windows physical after loading the matrix', 'ubuntu physical after loadi
        'windows virtual after loading the matrix', 'ubuntu virtual after loading the matrix', ...
        'windows physical after solving the system', 'ubuntu physical after solving the system', ...
        'windows virtual after solving the system', 'ubuntu virtual after solving the system')
-grid  
+%grid  
 
 %% physical memory comparison eigen (c++)  
 % eigen physical memory
@@ -165,7 +165,7 @@ legend('windows physical after loading the matrix', 'ubuntu physical after loadi
        'windows virtual after loading the matrix', 'ubuntu virtual after loading the matrix', ...
        'windows physical after solving the system', 'ubuntu physical after solving the system', ...
        'windows virtual after solving the system', 'ubuntu virtual after solving the system')
-grid
+%grid
  
 %% physical memory comparison windows
 % windows physical memory
@@ -194,7 +194,7 @@ xlabel('size', 'FontSize', 14);
 ylabel('physical memory usage (MB)', 'FontSize', 14);
 title('Comparison of physical memory usage in Windows', 'FontSize', 14);
 legend('matlab after loading the matrix', 'eigen after loading the matrix', 'matlab after solving the system',  'eigen after solving the system')
-grid
+%grid
 
 %% virtual memory comparison windows
 WV = [1060.609,  1.700, 1060.734,   4.884;

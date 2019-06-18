@@ -85,7 +85,7 @@ xlabel('size', 'FontSize', 14);
 ylabel('value', 'FontSize', 14);
 title('Comparison of relative error values in windows', 'FontSize', 14);
 legend('matlab relative error', 'eigen relative error')
-grid
+%grid
 
 %% relative error comparison ubuntu
 % ubuntu relative error 
