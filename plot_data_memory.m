@@ -1,4 +1,7 @@
 %% Carlo Radice 807159
+%% Metodi del Calcolo Scientifico
+%% A.A 2018/2019
+
 % preliminary operations 
 clc;
 clear;
