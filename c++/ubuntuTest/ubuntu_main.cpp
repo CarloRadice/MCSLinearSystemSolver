@@ -10,17 +10,12 @@
 #include <iostream>
 #include <fstream>
 #include <chrono>
-
 #include "stdlib.h"
 #include "stdio.h"
 #include "string.h"
 
-//const static Eigen::IOFormat CSVFormat(Eigen::StreamPrecision, Eigen::DontAlignCols, ", ", "\n");
-
 /*
  * UBUNTU LINUX VERSION
- * Methods which are needed to compute the values of the memory before, after loading the matrix and
- * the max memory usage.
 */
 
 int parseLine(char* line){
@@ -66,10 +61,6 @@ int getValuePhysical(){ //Note: this value is in KB!
 
 int main()
 {
-    //int i;
-    //std::cout << "Attach process while waiting for standard input" << std::endl;
-    //std::cin >> i;
-
     // load sparse matrix
     Eigen::SparseMatrix<double> A;
 
@@ -108,14 +99,6 @@ int main()
     double relativeError = (x-xe).norm()/(xe).norm();
     // print to screen relative error
     std::cout << "Relative error: " << relativeError << "\n" << std::endl;
-
-//    // print to file x (for check)
-//    std::ofstream file;
-//    file.open("test.txt");
-//    if (file.is_open()) {
-//        file << x.format(CSVFormat);
-//    }
-//    file.close();
 
     return 0;
 }

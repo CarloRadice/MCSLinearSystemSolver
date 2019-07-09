@@ -10,11 +10,8 @@
 #include <iostream>
 #include <fstream>
 #include <chrono>
-
 #include <windows.h>
 #include <psapi.h>
-
-//const static Eigen::IOFormat CSVFormat(Eigen::StreamPrecision, Eigen::DontAlignCols, ", ", "\n");
 
 /*
  * WINDOWS VERSION
@@ -23,10 +20,6 @@
 
 int main()
 {
-    int i;
-    std::cout << "Attach process while waiting for standard input" << std::endl;
-    std::cin >> i;
-
     // Virtual/Pysical memory
     PROCESS_MEMORY_COUNTERS_EX pmc_before;
     PROCESS_MEMORY_COUNTERS_EX pmc_after;
@@ -40,7 +33,7 @@ int main()
     std::cout << "Virtual memory before loading matrix in KB: " << pmc_before.PrivateUsage/1024.0 << std::endl;
 
     //load from windows
-    Eigen::loadMarket(A, "C:\\Users\\carloradice\\Documents\\MCSLinearSystemSolverMatrici\\matrici\\Flan_1565\\Flan_1565.mtx");
+    Eigen::loadMarket(A, "C:\\Users\\carloradice\\Documents\\MCSLinearSystemSolverMatrici\\matrici\\ex15\\ex15.mtx");
 
     GetProcessMemoryInfo(GetCurrentProcess(), (PROCESS_MEMORY_COUNTERS*)&pmc_after, sizeof(pmc_after));
     std::cout << "Physical memory after loading matrix in KB: " << pmc_after.WorkingSetSize/1024.0 << std::endl;
@@ -73,14 +66,6 @@ int main()
     double relativeError = (x-xe).norm()/(xe).norm();
     // print to screen relative error
     std::cout << "Relative error: " << relativeError << "\n" << std::endl;
-
-//    // print to file x (for check)
-//    std::ofstream file;
-//    file.open("test.txt");
-//    if (file.is_open()) {
-//        file << x.format(CSVFormat);
-//    }
-//    file.close();
 
     return 0;
 }
