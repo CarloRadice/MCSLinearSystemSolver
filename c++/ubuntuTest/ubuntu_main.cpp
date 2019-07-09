@@ -1,3 +1,9 @@
+/*
+ * Carlo Radice 807159
+ * Metodi del Calcolo Scientifico
+ * A.A 2018/2019
+*/
+
 #include <Eigen/Sparse>
 #include <Eigen/Core>
 #include <unsupported/Eigen/SparseExtra>
