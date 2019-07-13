@@ -32,7 +32,7 @@ int main()
     std::cout << "Physical memory before loading matrix in KB: " << pmc_before.WorkingSetSize/1024.0 << std::endl;
     std::cout << "Virtual memory before loading matrix in KB: " << pmc_before.PrivateUsage/1024.0 << std::endl;
 
-    //load from windows
+    // load from windows
     Eigen::loadMarket(A, "C:\\Users\\carloradice\\Documents\\MCSLinearSystemSolverMatrici\\matrici\\ex15\\ex15.mtx");
 
     GetProcessMemoryInfo(GetCurrentProcess(), (PROCESS_MEMORY_COUNTERS*)&pmc_after, sizeof(pmc_after));
@@ -43,18 +43,18 @@ int main()
     Eigen::VectorXd xe = Eigen::VectorXd::Constant(A.rows(), 1);
     Eigen::VectorXd b = A.selfadjointView<Eigen::Lower>() * xe;     // because the matrix isn't full rank
 
-    // Get starting timepoint
+    // get starting timepoint
     auto start = std::chrono::high_resolution_clock::now();
 
-    // Solving
+    // solving
     Eigen::SimplicialLLT<Eigen::SparseMatrix<double>> chol(A);      // performs a Cholesky factorization of A
     Eigen::VectorXd x = chol.solve(b);                              // use the factorization to solve for the given right hand side
 
-    // Get ending timepoint
+    // get ending timepoint
     auto stop = std::chrono::high_resolution_clock::now();
 
-    // Get duration
-    // To cast it to proper unit use duration cast method
+    // get duration
+    // cast it to proper unit use duration cast method
     auto duration = std::chrono::duration_cast<std::chrono::microseconds>(stop - start);
     // print to screen duration
     std::cout << "Time taken by function: " << duration.count() << " microseconds" << std::endl;
@@ -63,6 +63,7 @@ int main()
     std::cout << "Max physical memory in KB: " << pmc_max.WorkingSetSize/1024.0 << std::endl;
     std::cout << "Max virtual memory in KB: " << pmc_max.PrivateUsage/1024.0 << std::endl;
 
+    // calculate relative error
     double relativeError = (x-xe).norm()/(xe).norm();
     // print to screen relative error
     std::cout << "Relative error: " << relativeError << "\n" << std::endl;
