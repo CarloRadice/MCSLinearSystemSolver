@@ -1,0 +1,3 @@
+In the windows cmd:
+go to -> C:\Users\carloradice\AppData\Local\Programs\Python\Python37\Scripts
+then run -> python psrecord #id --log activity.txt --interval #numberInSec
